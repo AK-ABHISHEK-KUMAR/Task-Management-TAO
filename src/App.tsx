@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { onAuthStateChanged } from "@firebase/auth";
 import { auth } from "./services/firebase";
 import { useAuthStore } from "./store/authStore";
-import { Login } from "./components/auth/Login";
+// import { Login } from "./components/auth/Login";
 import { PrivateRoute } from "./components/auth/PrivateRoute";
 import { Header } from "./components/layout/Header";
 import { TaskView } from "./components/tasks/TaskView";
@@ -22,10 +22,10 @@ function App() {
   }, [setUser, setLoading]);
 
   return (
-    <Router>
+    <Router basename="/Task-Management-TAO">
       <div className="min-h-screen bg-gray-50">
         <Routes>
-          <Route path="/login" element={<Login />} />
+          {/* <Route path="/login" element={<Login />} /> */}
           <Route
             path="/"
             element={
